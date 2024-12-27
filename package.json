@@ -1,0 +1,39 @@
+{
+    "name": "@spotly/icons",
+    "version": "1.0.0",
+    "scripts": {
+        "prebuild": "rimraf src && rimraf dist",
+        "build": "npm run svgr && rollup -c",
+        "prepare": "husky",
+        "svgr": "svgr --icon --title-prop --replace-attr-values '#161316=currentColor' -d src assets "
+    },
+    "keywords": [
+        "React",
+        "Icons",
+        "React Icons",
+        "react icons",
+        "SVG",
+        "svg",
+        "svg icons",
+        "spotly"
+    ],
+    "module": "dist/index.esm.js",
+    "author": "Maksym Bukator",
+    "license": "MIT",
+    "description": "SVG-based React icon components for Spotly",
+    "devDependencies": {
+        "@babel/plugin-transform-runtime": "^7.25.9",
+        "@babel/preset-env": "^7.26.0",
+        "@babel/preset-react": "^7.26.3",
+        "@commitlint/cli": "^19.6.1",
+        "@commitlint/config-conventional": "^19.6.0",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@svgr/cli": "^8.1.0",
+        "husky": "^9.1.7",
+        "rimraf": "^6.0.1",
+        "rollup": "^4.29.1"
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.26.0"
+    }
+}
